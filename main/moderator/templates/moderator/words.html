@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+<title>📚 Всі слова</title>
+{% endblock %}
+
+{% block content %}
+<h1>📚 Всі слова</h1>
+
+{% if words %}
+    <ul>
+        {% for word in words %}
+            <li>
+                <strong>Слово:</strong> {{ word.Slovo }}<br>
+                <strong>Переклад:</strong> {{ word.Perevod }}<br>
+                <strong>На які мови перекладено:</strong> {{ word.languages }}
+            </li>
+            <hr>
+        {% empty %}
+            <p>Немає слів для відображення.</p>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Немає слів для відображення.</p>
+{% endif %}
+
+<br>
+<a href="{% url 'index' %}">⬅️ Повернутися</a>
+{% endblock %}

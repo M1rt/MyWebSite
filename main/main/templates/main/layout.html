@@ -1,0 +1,24 @@
+<!-- templates/user/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+<head>
+    <style>
+        html {
+            background-color: #d3d3d3; /* Серый фон */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <div class="container text-center">
+    </div>
+
+    {% block title %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+<footer>
+    <p>Сайт Самелюка. Всі права захищені 2025 (C)</p>
+</footer>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+<title>Додати слово</title>
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Додати нове слово</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>Введіть слово</label>
+        {{ form.Slovo }}
+        <label>Введіть переклад</label>
+        {{ form.Perevod }}
+        <label>Введіть мови</label>
+        {{ form.languages }}
+        <button type="submit" class="btn">Зберегти</button>
+    </form>
+    <a href="{% url 'index' user_id=user_id %}" class="back-link">⬅️ Повернутися</a>
+</div>
+{% endblock %}

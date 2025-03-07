@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+<title>Welcome Page</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title">Головне меню користувача</h1>
+    <p class="description">Ласкаво просимо до вашого особистого кабінету! Тут ви можете керувати своїм профілем, переглядати словник, дізнатися більше про нас або створити новий запис.</p>
+    <div class="button-group">
+        <button class="btn" onclick="location.href='word'">📖 Словник</button>
+        <button class="btn" onclick="location.href='{% url 'aboutus' user_id=user.id %}'">ℹ️ Про нас</button>
+        <button class="btn" onclick="location.href='account'">👤 Профіль</button>
+        <button class="btn" onclick="location.href='show_user_create'">➕ Создать</button>
+    </div>
+</div>
+{% endblock %}

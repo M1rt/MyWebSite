@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+<title>Welcome page</title>
+{% endblock %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+{% block content %}
+    <h1>Головне меню</h1>
+    <p>Це головне вікно модератора</p>
+    <a href="words">Переглянути слова</a>
+    <a href="users">Переглянути користувачів</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+<title>Welcome page</title>
+{% endblock %}
+
+{% block content %}
+    <h1>Головне меню</h1>
+    <p>Вітаємо вас на нашому сайті! Тут ви можете знайти переклади слів на різні мови, вивчати нову лексику та покращувати свої знання.</p>
+
+    <footer class="reg" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <button onclick="location.href='user/login'" style="width: 200px;">Увійти як користувач</button>
+        <button onclick="location.href='moderator'" style="width: 200px;">Увійти як модератор</button>
+    </footer>
+{% endblock %}
