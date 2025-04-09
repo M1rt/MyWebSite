@@ -1,9 +1,10 @@
 
 html {
-    height: 100%;              /* Растягиваем фон на всю страницу */
+    justify-content: flex-start;
+    height: 100%;       
     margin: 0;
     padding: 0;
-    background-color: #d3d3d3; /* Светло-серый фон для всей страницы */
+    background-color: #d3d3d3; 
     box-sizing: border-box;
 }
 
